@@ -6,17 +6,17 @@ class Program
     {
         List <int> numbers=new List <int> ();
 
-        Console.WriteLine("Enter a number enter zero to stop: ");
+        Console.Write("Enter a number enter zero to stop: ");
         int number=int.Parse(Console.ReadLine());
         int sum=0;
         int max=0;
-        int avg;
+        double avg;
 
         while (number != 0)
         {
             
             numbers.Add(number);
-            Console.WriteLine("Enter another Remember to enter 0 to stop: ");
+            Console.Write("Enter another Remember to enter 0 to stop: ");
             number=int.Parse(Console.ReadLine());
             
         }
@@ -24,17 +24,17 @@ class Program
         {
             foreach (int num in numbers)
             {
-              sum=sum+num;
+              sum+=num;
               if (num >max) 
               {
                 max=num;
               } 
-              Console.WriteLine(num); 
+               
             }
         }
         avg=sum/numbers.Count;
-        Console.WriteLine($"Sum= {sum}");
-        Console.WriteLine($"Average= {avg}");
-        Console.WriteLine($"Largest number in the list = {max}");
+        Console.WriteLine($"Sum={sum}");
+        Console.WriteLine($"Average={avg}");
+        Console.WriteLine($"Largest number in the list ={max}");
     }
 }

@@ -4,86 +4,61 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Please enter your score percent: ");
+        Console.Write("Please enter your score percent: ");
         string userinput=Console.ReadLine();
         int scorePercent = int.Parse(userinput);
         string letter="";
-        string message="";
+        int quotient;
+        int remainder;
         string plusOrMinus="";
         if(scorePercent>=90)
-        {   
-            message="Congratulations you have passed the exams";
-            letter="A";
-            if(scorePercent>=97)
-            {
-                plusOrMinus="+";
-
-            }
-            else if(scorePercent<=97)
-            {
-                plusOrMinus="-";
-
-            }
-
+        {  
+            letter="A";    
         }
         else if(scorePercent>=80 && scorePercent<90)
         {
-            message="Congratulations you have passed the exams";
             letter="B";
-            if(scorePercent>=87)
-            {
-                plusOrMinus="+";
-
-            }
-            else if(scorePercent<=87)
-            {
-                plusOrMinus="-";
-
-            }
-
+           
         }
         else if(scorePercent>=70 && scorePercent <80)
         {
-             message="Congratulations you have passed the exams";
+             
             letter="C";
-            if(scorePercent>=77)
-            {
-                plusOrMinus="+";
-
-            }
-            else if(scorePercent<=77)
-            {
-                plusOrMinus="-";
-
-            }
-
+            
         }
         else if(scorePercent>=60 && scorePercent<70)
         {
-             message="Sorry you have failed try again next time";
+             
             letter="D";
-            if(scorePercent>=67)
-            {
-                plusOrMinus="+";
-
-            }
-            else if(scorePercent<=67)
-            {
-                plusOrMinus="-";
-
-            }
 
         }
         else if(scorePercent>=0 && scorePercent<60)
         {
-            message="Sorry you have failed try again next time";
+        
             letter="F";
         }
         else
         {
             Console.WriteLine("Error please enter a valid score percent");
         }
-      Console.WriteLine($"___________{letter}{plusOrMinus}_________");
-      Console.WriteLine(message);
+        quotient=scorePercent/10 ;
+        remainder=scorePercent-(quotient*10);
+        if (remainder>=7)
+        {
+            plusOrMinus="+";
+        }
+        else if (remainder<3)
+        {
+            plusOrMinus="-";
+        }
+        Console.WriteLine($"___________{letter}{plusOrMinus}_________");
+        if (scorePercent>=70 && scorePercent<=100)
+        {
+            Console.WriteLine("Congratulations you have passed the exams");
+        }
+        else if (scorePercent<=69 && scorePercent>=0)
+        {
+            Console.WriteLine("Sorry you have failed try again next time");
+        }
     }
 }
