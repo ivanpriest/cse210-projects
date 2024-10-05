@@ -1,7 +1,7 @@
 
 public class PromptGenerator
 {
-    public List<string>_prompts=new List<string>(new string[]{"what is the most important thing you have done today? ","What is the most interesting thing you have done today? ","How are you feeling today (how)?","What did you learn from your scripture study today?","What did you do for some to show love today?"});
+    public List<string>_prompts=new List<string>(new string[]{"what is the most important thing you have done today? ","What is the most interesting thing you have done today? ","How are you feeling today (how)?","What did you learn from your scripture study today?","What did you do for someone to show love today?"});
         
 
     public PromptGenerator()
