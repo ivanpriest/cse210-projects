@@ -21,5 +21,6 @@ class Program
         double value3=thirdFrac.GetDecimalValue();
         Console.WriteLine($"{fraction3}");
         Console.WriteLine($"{value3}");
+
     }
 }

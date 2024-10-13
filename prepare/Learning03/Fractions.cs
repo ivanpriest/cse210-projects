@@ -22,13 +22,13 @@ public class Fractions
       _denominator=denominator;
    }
 
-   public void GetNumerator()
+   public int GetNumerator()
    {
-    Console.WriteLine($"{_numerator}");
+    return _numerator;
    }
-   public void GetDenominator()
+   public int GetDenominator()
    {
-    Console.WriteLine($"{_denominator}");
+    return _denominator;
    }
    public void SetNumerator(int numerator )
    {
