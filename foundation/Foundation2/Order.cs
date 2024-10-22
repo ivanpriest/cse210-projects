@@ -36,7 +36,7 @@ public class Order
     }
     public string GetshippingLabel()
     {
-        string shippingLabel=$"---SHIPPING LABEL---\n\n\nSHIP TO:\n{_customer.GetAddress().GetDisplayText()}";
+        string shippingLabel=$"---SHIPPING LABEL---\n\n\nSHIP TO:\n{_customer.GetName()}\n{_customer.GetAddress().GetDisplayText()}";
         return shippingLabel;
     }
     public double GetTotalCost()
