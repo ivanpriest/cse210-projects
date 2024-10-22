@@ -34,7 +34,7 @@ public class Order
         string packingLabel=$"---PACKING LABEL---\n\n\nFROM:\nIvan's\nAccra,Ghana\nPhone:00223592311882\n\nTO:\n{_customer.GetName()}\n{_customer.GetAddress().GetDisplayText()}\nTRACKING NO: 29848-58303\nPRODUCTS:\n{packingList}\n\n\nHANDLING: Fragile-Handle with care\nSHIPPING METHOD: Standard Shipping\n";
         return packingLabel;
     }
-    public string GetshippingLabel()
+    public string GetShippingLabel()
     {
         string shippingLabel=$"---SHIPPING LABEL---\n\n\nSHIP TO:\n{_customer.GetName()}\n{_customer.GetAddress().GetDisplayText()}";
         return shippingLabel;

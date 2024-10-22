@@ -16,9 +16,11 @@ class Program
         order2.AddProduct(product4);
         string packingLabel1= order1.GetPackingLabel();
         string packingLabel2= order2.GetPackingLabel();
-        string shippingLabel1= order1.GetPackingLabel();
-        string shippingLabel2=order2.GetshippingLabel();
-        Console.WriteLine($"{packingLabel1}\n{shippingLabel1}\n\n{packingLabel2}\n{shippingLabel2}");
+        string shippingLabel1= order1.GetShippingLabel();
+        string shippingLabel2=order2.GetShippingLabel();
+        double subTotal1=order1.GetTotalCost();
+        double subTotal2=order2.GetTotalCost();
+        Console.WriteLine($"{packingLabel1}\n{shippingLabel1}\nSubtotal= ${subTotal1}\n\n{packingLabel2}\n{shippingLabel2}\nSubtotal= ${subTotal2}");
 
     }
 }
