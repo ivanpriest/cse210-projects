@@ -1,11 +1,11 @@
 public class Activity
 {
-    protected DateTime _date;
+    protected string _date;
     protected int _lengthInMinute;
 
     public Activity(int length)
     {
-        _date=DateTime.Now;
+        _date= DateTime.Now.ToString("dddd, dd MMMM yyyy");
         _lengthInMinute=length;
     }
     public virtual double GetDistance()
